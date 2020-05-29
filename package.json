@@ -1,0 +1,22 @@
+{
+  "name": "circletesting",
+  "version": "1.0.0",
+  "description": "Test package for CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedant1995/circletesting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vedant1995/circletesting/issues"
+  },
+  "homepage": "https://github.com/vedant1995/circletesting#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
