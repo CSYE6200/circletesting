@@ -1,17 +1,38 @@
-version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+version: 2
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  pr_check:
+    docker:
+      - image: circleci/node:10.19.0
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
+      - run:
+          name: Install the dependencies 
+          command: 'npm install'
+
+  build:
+    docker:
+      - image: circleci/node:10.19.0
+    steps:
+      - checkout
+      - run:
+          name: Installing NPM
+          command: 'npm install'  
+
+
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  version: 2
+  pr-check:
+    jobs:
+    - pr_check
+
+  build:
+
+    jobs:
+    - build:
+        filters:
+          branches:
+            only: master
+    # - deploy:
+    #     filters:
+    #       branches:
+    #         only: master            
