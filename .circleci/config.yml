@@ -16,7 +16,10 @@ jobs:
       - checkout
       - run:
           name: Installing NPM
-          command: 'npm install'  
+          command: 'npm install' 
+      - run: 
+          name: run node server
+          command: 'node server.js' 
 
 
 workflows:
