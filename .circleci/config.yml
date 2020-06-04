@@ -10,7 +10,7 @@ jobs:
           command: 'npm install'
       - run: 
           name: run node server
-          command: 'node server.js' 
+          command: 'node index.js' 
 
   setupSQLImage:
     docker:
