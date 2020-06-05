@@ -12,9 +12,9 @@ if (process.env.APPLICATION_ENV === 'prod') {
 } else {
         db  = mysql.createConnection({
         host     : 'localhost',
-        user     : 'user',
-        password : 'rootpw',
-        database : 'test_db'
+        user     : 'root',
+        password : 'password',
+        database : 'ecommerce'
       });
       
       db.connect((err, res)=>{

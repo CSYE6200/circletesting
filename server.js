@@ -2,7 +2,7 @@ const express = require("express"),
   app = express(),
   port = process.env.EXPRESS_PORT || 3301,
   bodyParser = require("body-parser");
-  //db = require("./config/db");
+  db = require("./config/db");
   cors = require("cors");
 
 console.log("Current environment is " + process.env.EXPRESS_PORT);

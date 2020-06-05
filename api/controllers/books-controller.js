@@ -43,8 +43,9 @@ exports.updateBook = (req, res) => {
     let authors = req.body.authors;  
     let price = req.body.price;
     let quantity = req.body.quantity; 
+    var updateDate = moment().format('YYYY-MM-DD HH:mm:ss'); 
   
-            db.query("update books set isbn = ? , title = ? , price = ? , quantity = ? , authors = ? where id = ? ", [isbn, title, price, quantity, authors, bookId], (updateError, updateResult) => {
+            db.query("update books set isbn = ? , title = ? , price = ? , quantity = ? , authors = ? , updatedDate = ? where id = ? ", [isbn, title, price, quantity, authors,updateDate, bookId ], (updateError, updateResult) => {
               if(updateError) {
                 console.log("failed");
               }

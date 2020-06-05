@@ -1,5 +1,5 @@
-# Assignment 2 - webapp 
-Assignment 2 for the course CSYE 6225 Network Structures and Cloud Computing 
+# Assignment 3 - webapp - Bookstore 
+Assignment 3 for the course CSYE 6225 Network Structures and Cloud Computing 
 
 ## Technologies/Frameworks Used
 
@@ -24,13 +24,16 @@ Authentication/Authorization: JWT, bcrypt
 7. App is hosted at http://localhost:4200
 
 ## Screenshot
-![](screenshots/Screenshot_2020-05-29 Ui.png)
+![](screenshots/Screenshot.png)
 
 ## User Stories:
 1. User can sign up by providing the Email, Firstname, Lastname, Password
 2. Login using the email and the password 
 3. User can set a new password by providing the old password 
 4. Change the firstname and the lastname 
+5. User can be a buyer or a seller
+6. User can add a book. And then manage (delete,update) that book. 
+7. Add a book to the cart
 
 
 ## API Endpoints:
@@ -41,6 +44,21 @@ Users
 4. PUT /users/settings/password
 5. PUT /users/settings/info
 6. GET /test
+
+Books
+1. GET /books
+2. POST /books
+3. PUT /books
+4. DELETE /books/:id
+5. GET /books/:id 
+
+Cart
+1. GET /cart/:id
+2. POST /cart/:id
+3. PUT /cart/:id
+4. DELETE /cart/:id
+
+
 
 
 

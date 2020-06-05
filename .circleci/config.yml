@@ -9,8 +9,8 @@ jobs:
           name: Install the dependencies 
           command: 'npm install'
       - run: 
-          name: run node server
-          command: 'node index.js' 
+          name: run the unit test
+          command: 'npm test' 
 
   setupSQLImage:
     docker:
@@ -50,8 +50,8 @@ jobs:
           name: Installing NPM
           command: 'npm install' 
       - run: 
-          name: run node server
-          command: 'node index.js' 
+          name: run the unit test
+          command: 'npm test' 
 
 
 workflows:
