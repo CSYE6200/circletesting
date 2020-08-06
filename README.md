@@ -1,2 +1,2 @@
 # circletesting
-Circle CI testing project
+Rebase now on smerge feature
